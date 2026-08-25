@@ -1,0 +1,39 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Lab 4 · gates (no model, free)",
+      "type": "debugpy", "request": "launch",
+      "program": "${workspaceFolder}/lab4_crewai.py",
+      "args": ["gates"], "console": "integratedTerminal",
+      "justMyCode": false
+    },
+    {
+      "name": "Lab 4 · prompt (build crew, no call)",
+      "type": "debugpy", "request": "launch",
+      "program": "${workspaceFolder}/lab4_crewai.py",
+      "args": ["prompt"], "console": "integratedTerminal"
+    },
+    {
+      "name": "Lab 4 · crew (calls the model)",
+      "type": "debugpy", "request": "launch",
+      "program": "${workspaceFolder}/lab4_crewai.py",
+      "args": ["crew", "--verbose"], "console": "integratedTerminal",
+      "env": {"LLM_PROVIDER": "ollama"}
+    },
+    {
+      "name": "Lab 4 · compare (both, 3 fixtures)",
+      "type": "debugpy", "request": "launch",
+      "program": "${workspaceFolder}/lab4_crewai.py",
+      "args": ["compare"], "console": "integratedTerminal"
+    },
+    {
+      "name": "Lab 4 · crew on OpenAI",
+      "type": "debugpy", "request": "launch",
+      "program": "${workspaceFolder}/lab4_crewai.py",
+      "args": ["crew"], "console": "integratedTerminal",
+      "env": {"LLM_PROVIDER": "openai"},
+      "envFile": "${workspaceFolder}/.env"
+    }
+  ]
+}
